@@ -15,6 +15,7 @@ class MessagesController < ApplicationController
       #battery_charge_discharge(current_user, "send_message")
       body = params[:message][:body]
       body = body.gsub(/(?:f|ht)tps?:\/[^\s]+/, t("link_removed")).gsub(/<script.*?>[\s\S]*<\/script>/i, "").gsub(/<("[^"]*"|'[^']*'|[^'">])*>/, "")
+      params[:message][:body] = body
       params[:message][:sender_id] = current_user.id
       @sender_message = @message = Message.create(message_params)
       @sender = @sender_message.sender
