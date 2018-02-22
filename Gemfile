@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby '2.1.1'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
-gem "rails", "4.1.1"
+gem "rails", "~> 4.2.7.1"
 # Use Postgresql as the database for Active Record
 gem "pg", group: :production
 
@@ -52,7 +52,7 @@ gem "haml"
 gem "haml-rails"
 
 # Process attachiment
-gem "paperclip", "~> 4.1"
+gem "paperclip"
 
 gem 'aws-sdk'
 
